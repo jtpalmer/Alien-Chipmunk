@@ -22,7 +22,6 @@ my $builder = Alien::Base::ModuleBuild->new(
         pattern  => qr/ChipmunkLatest\.tgz/,
     },
     alien_build_commands => [
-        'echo "%p -- %s" > /tmp/alien.txt',
         'CMAKE_INSTALL_PREFIX=%s cmake .',
         'make',
         'make install'
