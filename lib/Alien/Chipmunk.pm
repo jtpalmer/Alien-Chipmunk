@@ -1,4 +1,4 @@
-package Alient::Chipmunk;
+package Alien::Chipmunk;
 
 use strict;
 use warnings;
