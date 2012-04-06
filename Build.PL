@@ -1,8 +1,6 @@
 use strict;
 use warnings;
 
-use lib '../../lib';
-
 use utf8;
 use Alien::Base::ModuleBuild;
 
