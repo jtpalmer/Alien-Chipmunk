@@ -1,7 +1,6 @@
 use strict;
 use warnings;
 
-use utf8;
 use Alien::Base::ModuleBuild;
 
 my $builder = Alien::Base::ModuleBuild->new(
