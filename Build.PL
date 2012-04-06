@@ -17,8 +17,8 @@ my $builder = Alien::Base::ModuleBuild->new(
     alien_repository => {
         protocol => 'http',
         host     => 'chipmunk-physics.net',
-        location => '/release',
-        pattern  => qr/ChipmunkLatest\.tgz/,
+        location => '/release/Chipmunk-6.x',
+        pattern  => qr/Chipmunk-([\d\.]+)\.tgz$/,
     },
     alien_build_commands => [
         'CMAKE_INSTALL_PREFIX=%s cmake .',
