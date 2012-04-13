@@ -1,5 +1,8 @@
+/Alien-Chipmunk-*
 /Build
 /MYMETA.*
+/META.*
 /_alien
 /_build
+/_install
 /blib
