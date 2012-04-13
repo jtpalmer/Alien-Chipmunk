@@ -1,3 +1,5 @@
 Build.PL
 lib/Alien/Chipmunk.pm
 MANIFEST
+META.yml
+META.json
