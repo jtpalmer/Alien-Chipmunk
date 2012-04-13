@@ -21,7 +21,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         pattern  => qr/Chipmunk-([\d\.]+)\.tgz$/,
     },
     alien_build_commands => [
-        'cmake -DCMAKE_INSTALL_PREFIX:PATH=%s',
+        'cmake -DBUILD_DEMOS=FALSE -DCMAKE_INSTALL_PREFIX:PATH=%s',
         'make',
         'make install'
     ],
