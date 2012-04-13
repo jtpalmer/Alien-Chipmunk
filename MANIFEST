@@ -1,5 +1,12 @@
 Build.PL
+Changes
 lib/Alien/Chipmunk.pm
+LICENSE
 MANIFEST
-META.yml
 META.json
+META.yml
+README
+t/00-load.t
+t/01-config.t
+t/02-compile.t
+t/src/test.c
