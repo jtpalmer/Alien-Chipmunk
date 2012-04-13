@@ -6,3 +6,5 @@
 /_build
 /_install
 /blib
+/t/src/test
+/t/src/test.o
