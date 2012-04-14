@@ -7,8 +7,12 @@ my $builder = Alien::Base::ModuleBuild->new(
     module_name        => 'Alien::Chipmunk',
     dist_abstract      => 'Build and install the Chipmunk Physics library',
     license            => 'perl',
-    configure_requires => { 'Alien::Base' => 0.000008 },
-    requires           => {
+    configure_requires => {
+        'Module::Build' => 0,
+        'Alien::Base'   => 0.000008,
+    },
+    build_requires => { 'Test::More' => 0 },
+    requires => {
         'perl'        => '5.8.1',
         'Alien::Base' => 0,
     },
