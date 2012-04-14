@@ -16,7 +16,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         'perl'        => '5.8.1',
         'Alien::Base' => 0,
     },
-    dist_author      => 'Jeffrey T. Palmer <jtpalmer AT cpan DOT org>',
+    dist_author      => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
     alien_name       => 'chipmunk',
     alien_repository => {
         protocol => 'http',
