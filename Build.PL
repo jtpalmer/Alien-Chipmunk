@@ -16,7 +16,13 @@ my $builder = Alien::Base::ModuleBuild->new(
         'perl'        => '5.8.1',
         'Alien::Base' => 0,
     },
-    dist_author      => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
+    dist_author    => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
+    meta_merge     => {
+        resources => {
+            repository => 'https://github.com/jtpalmer/Alien-Chipmunk',
+            bugtracker => 'https://github.com/jtpalmer/Alien-Chipmunk/issues',
+        },
+    },
     alien_name       => 'chipmunk',
     alien_repository => {
         protocol => 'http',
