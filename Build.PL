@@ -12,7 +12,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         'Alien::Base'   => 0.000008,
     },
     build_requires => { 'Test::More' => 0 },
-    requires => {
+    requires       => {
         'perl'        => '5.8.1',
         'Alien::Base' => 0,
     },
@@ -33,8 +33,7 @@ my $builder = Alien::Base::ModuleBuild->new(
     },
     alien_build_commands => [
         'cmake -DBUILD_DEMOS=OFF -DCMAKE_INSTALL_PREFIX=%s',
-        'make',
-        'make install'
+        'make', 'make install',
     ],
 );
 $builder->create_build_script;
