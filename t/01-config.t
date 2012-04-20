@@ -4,6 +4,9 @@ use warnings;
 use Test::More;
 use Alien::Chipmunk;
 
+diag( 'NAME=' . Alien::Chipmunk->config('name') );
+diag( 'VERSION=' . Alien::Chipmunk->config('version') );
+
 my $alien = Alien::Chipmunk->new;
 
 diag( 'CFLAGS=' . $alien->cflags );
