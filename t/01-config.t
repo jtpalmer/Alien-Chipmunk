@@ -6,8 +6,11 @@ use Alien::Chipmunk;
 
 my $alien = Alien::Chipmunk->new;
 
-like( $alien->libs,   qr/-L/ );
+diag( 'CFLAGS=' . $alien->cflags );
+diag( 'LIBS=' . $alien->libs );
+
 like( $alien->cflags, qr/-I/ );
+like( $alien->libs,   qr/-L/ );
 
 done_testing();
 
