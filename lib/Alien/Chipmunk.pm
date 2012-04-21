@@ -10,3 +10,69 @@ use parent 'Alien::Base';
 
 1;
 
+__END__
+
+=head1 NAME
+
+Alien::Chipmunk - Alien package for the Chipmunk Physics library
+
+=head1 SYNOPSIS
+
+    use Module::Build;
+    use Alien::Chipmunk;
+
+    my $alien = Alien::Chipmunk->new;
+
+    my $builder = Module::Build->new(
+        module_name => 'Some::Library::Chipmunk',
+        # ...
+        configure_requires => {
+            'Alien::Chipmunk' => 0,
+            # ...
+        },
+        build_requires => {
+            'Alien::Chipmunk' => 0
+            # ...
+        },
+        extra_compiler_flags => $alien->cflags,
+        extra_linker_flags   => $alien->libs . ' -lm',
+    );
+
+    $builder->create_build_script();
+
+=head1 DESCRIPTION
+
+L<Alien::Chipmunk> installs and downloads the Chipmunk Physics library.
+
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<Alien>
+
+=item *
+
+L<Alien::Base>
+
+=item *
+
+L<Chipmunk>
+
+=back
+
+=head1 AUTHOR
+
+Jeffrey T. Palmer, E<lt>jtpalmer@cpan.orgE<gt>
+
+=head1 COPYRIGHT AND LICENSE
+
+Copyright (C) 2012 by Jeffrey T. Palmer
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.14.2 or,
+at your option, any later version of Perl 5 you may have available.
+
+=cut
+
