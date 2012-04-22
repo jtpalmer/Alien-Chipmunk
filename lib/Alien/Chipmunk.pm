@@ -70,9 +70,8 @@ Jeffrey T. Palmer, E<lt>jtpalmer@cpan.orgE<gt>
 
 Copyright (C) 2012 by Jeffrey T. Palmer
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.14.2 or,
-at your option, any later version of Perl 5 you may have available.
+This is free software; you can redistribute it and/or modify it under
+the same terms as the Perl 5 programming language system itself.
 
 =cut
 
