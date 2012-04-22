@@ -26,8 +26,9 @@ my $builder = Alien::Base::ModuleBuild->new(
             bugtracker => 'https://github.com/jtpalmer/Alien-Chipmunk/issues',
         },
     },
-    alien_name       => 'chipmunk',
-    alien_repository => {
+    alien_name          => 'chipmunk',
+    alien_provides_libs => '-lchipmunk',
+    alien_repository    => {
         protocol => 'http',
         host     => 'chipmunk-physics.net',
         location => '/release/Chipmunk-6.x',
