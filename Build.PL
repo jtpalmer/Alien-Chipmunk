@@ -24,16 +24,18 @@ my $builder = Alien::Base::ModuleBuild->new(
             bugtracker => 'https://github.com/jtpalmer/Alien-Chipmunk/issues',
         },
     },
-    alien_name       => 'chipmunk',
-    alien_repository => {
+    alien_name          => 'chipmunk',
+    alien_provides_libs => '-lchipmunk',
+    alien_repository    => {
         protocol => 'http',
         host     => 'chipmunk-physics.net',
         location => '/release/Chipmunk-6.x',
         pattern  => qr/Chipmunk-([\d\.]+)\.tgz$/,
     },
     alien_build_commands => [
-        'cmake -DBUILD_DEMOS=OFF -DCMAKE_INSTALL_PREFIX=%s',
-        'make', 'make install',
+        'cmake -DBUILD_DEMOS=OFF -DBUILD_SHARED=OFF -DINSTALL_SHARED=OFF -DCMAKE_INSTALL_PREFIX=%s',
+        'make',
+        'make install',
     ],
 );
 $builder->create_build_script;
