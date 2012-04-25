@@ -25,7 +25,7 @@ SKIP: {
     is( defined $exe, 1, "Linking test.c" );
     my $rv = system($exe);
     is( $rv, 0, "Executing test" );
-};
+}
 
 done_testing();
 
