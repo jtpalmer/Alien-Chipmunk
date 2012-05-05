@@ -1,6 +1,5 @@
 use strict;
 use warnings;
-
 use Alien::Base::ModuleBuild;
 
 my $builder = Alien::Base::ModuleBuild->new(
@@ -37,5 +36,6 @@ my $builder = Alien::Base::ModuleBuild->new(
         'make install',
     ],
 );
+
 $builder->create_build_script;
 
