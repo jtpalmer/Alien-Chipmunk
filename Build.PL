@@ -10,8 +10,11 @@ my $builder = Alien::Base::ModuleBuild->new(
         'Module::Build' => 0,
         'Alien::Base'   => 0.000008,
     },
-    build_requires => { 'Test::More' => 0 },
-    requires       => {
+    build_requires => {
+        'Test::More'   => 0,
+        'Alien::CMake' => '0.03',
+    },
+    requires => {
         'perl'        => '5.8.1',
         'Alien::Base' => 0,
     },
