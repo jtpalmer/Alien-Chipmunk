@@ -16,6 +16,7 @@ my $builder = Alien::Base::ModuleBuild->new(
     },
     requires => {
         'perl'        => '5.8.1',
+        'parent'      => 0,
         'Alien::Base' => 0,
     },
     add_to_cleanup => [ 't/src/test.o', 't/src/test' ],
