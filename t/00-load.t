@@ -1,13 +1,18 @@
-#!perl -T
+#!perl
 use strict;
 use warnings;
 use Test::More;
 
 BEGIN {
-    use_ok 'Alien::Chipmunk' or BAIL_OUT('Load failed!');
+    use_ok('Alien::Chipmunk') or BAIL_OUT('Failed to load Alien::Chipmunk');
 }
 
-diag "Testing Alien::Chipmunk $Alien::Chipmunk::VERSION, Perl $], $^X";
+diag(
+    sprintf(
+        'Testing Alien::Chipmunk %f, Perl %f, %s',
+        $Alien::Chipmunk::VERSION, $], $^X
+    )
+);
 
 done_testing();
 
