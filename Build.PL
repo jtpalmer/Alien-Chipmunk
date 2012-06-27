@@ -5,7 +5,7 @@ use Alien::Base::ModuleBuild;
 my $builder = Alien::Base::ModuleBuild->new(
     module_name        => 'Alien::Chipmunk',
     dist_abstract      => 'Build and install the Chipmunk Physics library',
-    license            => 'perl',
+    license            => 'mit',
     configure_requires => {
         'Module::Build' => 0,
         'Alien::Base'   => 0,
