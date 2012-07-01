@@ -22,7 +22,8 @@ my $builder = Alien::Base::ModuleBuild->new(
     add_to_cleanup => [ 't/src/test.o', 't/src/test' ],
     meta_merge     => {
         resources => {
-            repository => 'https://github.com/jtpalmer/Alien-Chipmunk',
+            homepage   => 'https://github.com/jtpalmer/Alien-Chipmunk',
+            repository => 'https://github.com/jtpalmer/Alien-Chipmunk.git',
             bugtracker => 'https://github.com/jtpalmer/Alien-Chipmunk/issues',
         },
     },
