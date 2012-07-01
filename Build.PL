@@ -5,6 +5,7 @@ use Alien::Base::ModuleBuild;
 my $builder = Alien::Base::ModuleBuild->new(
     module_name        => 'Alien::Chipmunk',
     dist_abstract      => 'Build and install the Chipmunk Physics library',
+    dist_author        => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
     license            => 'mit',
     configure_requires => {
         'Module::Build' => 0,
@@ -19,7 +20,6 @@ my $builder = Alien::Base::ModuleBuild->new(
         'Alien::Base' => 0,
     },
     add_to_cleanup => [ 't/src/test.o', 't/src/test' ],
-    dist_author    => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
     meta_merge     => {
         resources => {
             repository => 'https://github.com/jtpalmer/Alien-Chipmunk',
