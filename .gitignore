@@ -5,6 +5,7 @@
 /_alien
 /_build
 /_install
+/_share
 /blib
 /t/src/test
 /t/src/test.o
