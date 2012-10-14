@@ -9,3 +9,4 @@
 /blib
 /t/src/test
 /t/src/test.o
+*.bak
