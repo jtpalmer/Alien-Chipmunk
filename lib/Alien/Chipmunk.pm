@@ -2,11 +2,10 @@ package Alien::Chipmunk;
 
 use strict;
 use warnings;
+use parent qw(Alien::Base);
 
 our $VERSION = '0.000001';
 $VERSION = eval $VERSION;
-
-use parent 'Alien::Base';
 
 1;
 
