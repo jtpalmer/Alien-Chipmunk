@@ -1,5 +1,5 @@
 NAME
-    Alien::Chipmunk
+    Alien::Chipmunk - Alien package for the Chipmunk Physics library
 
 VERSION
     version 0.000001
@@ -30,25 +30,12 @@ SYNOPSIS
 DESCRIPTION
     Alien::Chipmunk installs and downloads the Chipmunk Physics library.
 
-NAME
-    Alien::Chipmunk - Alien package for the Chipmunk Physics library
-
 SEE ALSO
     *   Alien
 
     *   Alien::Base
 
     *   Chipmunk
-
-AUTHOR
-    Jeffrey T. Palmer, <jtpalmer@cpan.org>
-
-COPYRIGHT AND LICENSE
-    This software is Copyright (c) 2012 by Jeffrey T. Palmer.
-
-    This is free software, licensed under:
-
-      The MIT (X11) License
 
 AUTHOR
     Jeffrey T. Palmer <jtpalmer@cpan.org>

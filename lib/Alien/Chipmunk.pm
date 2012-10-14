@@ -1,5 +1,7 @@
 package Alien::Chipmunk;
 
+# ABSTRACT: Alien package for the Chipmunk Physics library
+
 use strict;
 use warnings;
 use parent qw(Alien::Base);
@@ -7,10 +9,6 @@ use parent qw(Alien::Base);
 1;
 
 __END__
-
-=head1 NAME
-
-Alien::Chipmunk - Alien package for the Chipmunk Physics library
 
 =head1 SYNOPSIS
 
@@ -57,18 +55,6 @@ L<Alien::Base>
 L<Chipmunk>
 
 =back
-
-=head1 AUTHOR
-
-Jeffrey T. Palmer, E<lt>jtpalmer@cpan.orgE<gt>
-
-=head1 COPYRIGHT AND LICENSE
-
-This software is Copyright (c) 2012 by Jeffrey T. Palmer.
-
-This is free software, licensed under:
-
-  The MIT (X11) License
 
 =cut
 
