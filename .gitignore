@@ -1,12 +1,3 @@
+/.build
 /Alien-Chipmunk-*
-/Build
-/MYMETA.*
-/META.*
-/_alien
-/_build
-/_install
-/_share
-/blib
-/t/src/test
-/t/src/test.o
-*.bak
+
