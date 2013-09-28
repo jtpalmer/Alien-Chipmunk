@@ -14,6 +14,7 @@ SKIP: {
 
     my @L = $alien->libs =~ /-L(\S+)/g;
     $ENV{LD_RUN_PATH} = join( $Config::Config{path_sep}, @L );
+    diag( 'LD_RUN_PATH=' . $ENV{LD_RUN_PATH} );
 
     my $cb = ExtUtils::CBuilder->new( quiet => 0 );
 
