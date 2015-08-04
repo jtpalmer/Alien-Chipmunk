@@ -30,6 +30,7 @@ my $builder = Alien::Base::ModuleBuild->new(
         },
     },
     alien_name       => 'chipmunk',
+    alien_isolate_dynamic => 1,
     alien_repository => {
         protocol => 'http',
         host     => 'chipmunk-physics.net',
