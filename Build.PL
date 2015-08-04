@@ -2,9 +2,10 @@ use strict;
 use warnings;
 use lib 'inc';
 use My::ModuleBuild;
+use Config;
 
 my $cflags = '';
-my $libs   = '-lchipmunk';
+my $libs   = join(' ', '-lchipmunk', grep(/^-lm$/, split /\s+/, $Config{libs}));
 
 if($ENV{ALIEN_CHIPMUNK_PREFIX}) {
   $cflags = "-I$ENV{ALIEN_CHIPMUNK_PREFIX}/include/chipmunk";

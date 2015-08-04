@@ -25,7 +25,7 @@ sub alien_check_installed_version {
   my($exe, @rest) = eval {
     $b->link_executable(
       objects            => [$obj],
-      extra_linker_flags => $self->alien_provides_libs . " $Config{libs}",
+      extra_linker_flags => $self->alien_provides_libs,
     );
   };
   
