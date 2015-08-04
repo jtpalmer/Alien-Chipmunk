@@ -21,7 +21,7 @@ SKIP: {
 
     my $exe = $cb->link_executable(
         objects            => [$obj],
-        extra_linker_flags => $alien->libs . ' -lm',
+        extra_linker_flags => $alien->libs . " $Config{libs}",
     );
     is( defined $exe, 1, "Linking test.c" );
 
