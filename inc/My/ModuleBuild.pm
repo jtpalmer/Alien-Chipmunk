@@ -34,7 +34,7 @@ sub alien_check_installed_version {
   return unless defined $exe;
   
   $self->add_to_cleanup($exe, @rest);
-  $DB::single = 1;
+
   if(`$exe` =~ /version=([0-9\.]+)/) {
     my $version = $1;
     unlink $exe, @rest;
