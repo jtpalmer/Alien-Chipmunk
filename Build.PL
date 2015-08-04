@@ -13,11 +13,13 @@ my $builder = Alien::Base::ModuleBuild->new(
     },
     build_requires => {
         'Test::More'   => 0,
+    },
+    alien_bin_requires => {
         'Alien::CMake' => '0.03',
     },
     requires => {
         'perl'        => '5.8.1',
-        'Alien::Base' => 0,
+        'Alien::Base' => 0.006,
     },
     add_to_cleanup => [ 't/src/test.o', 't/src/test' ],
     meta_merge     => {
