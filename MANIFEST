@@ -1,5 +1,7 @@
 Build.PL
 Changes
+inc/My/ModuleBuild.pm
+inc/My/test.c
 lib/Alien/Chipmunk.pm
 LICENSE
 MANIFEST
