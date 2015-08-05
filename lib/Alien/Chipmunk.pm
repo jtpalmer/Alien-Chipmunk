@@ -61,13 +61,15 @@ L<Chipmunk>
 
 =back
 
-=head1 AUTHOR
+=head1 AUTHORS
 
-Jeffrey T. Palmer, E<lt>jtpalmer@cpan.orgE<gt>
+Jeffrey T. Palmer E<lt>jtpalmer@cpan.orgE<gt>
+
+Graham Ollis E<lt>plicease@cpan.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is Copyright (c) 2013 by Jeffrey T. Palmer.
+This software is Copyright (c) 2015 by Jeffrey T. Palmer.
 
 This is free software, licensed under:
 
