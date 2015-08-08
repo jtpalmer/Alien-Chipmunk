@@ -4,6 +4,6 @@
 int
 main(int argc, char *argv[])
 {
-  printf("version=%s\n", cpVersionString);
-  return 0;
+    printf("version=%s\n", cpVersionString);
+    return 0;
 }

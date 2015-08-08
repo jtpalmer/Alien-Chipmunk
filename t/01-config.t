@@ -12,9 +12,10 @@ diag( 'CFLAGS=' . $alien->cflags );
 diag( 'LIBS=' . $alien->libs );
 
 SKIP: {
-  skip "system libs may not need -I or -L", 2 if $alien->install_type('system');  
-  like( $alien->cflags, qr/-I/ );
-  like( $alien->libs,   qr/-L/ );
+    skip "system libs may not need -I or -L", 2
+        if $alien->install_type('system');
+    like( $alien->cflags, qr/-I/ );
+    like( $alien->libs,   qr/-L/ );
 }
 
 done_testing();

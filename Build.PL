@@ -5,17 +5,21 @@ use My::ModuleBuild;
 use Config;
 
 my $cflags = '';
-my $libs   = join(' ', '-lchipmunk', grep(/^-lm$/, split /\s+/, $Config{libs}));
+my $libs
+    = join( ' ', '-lchipmunk', grep( /^-lm$/, split /\s+/, $Config{libs} ) );
 
-if($ENV{ALIEN_CHIPMUNK_PREFIX}) {
-  $cflags = "-I$ENV{ALIEN_CHIPMUNK_PREFIX}/include/chipmunk";
-  $libs   = "-L$ENV{ALIEN_CHIPMUNK_PREFIX}/lib $libs";
-} else {
-  foreach my $dir (map { "$_/chipmunk" } qw( /usr/include /usr/local/include )) {
-    if(-r "$dir/chipmunk.h") {
-      $cflags = "-I$dir";
+if ( $ENV{ALIEN_CHIPMUNK_PREFIX} ) {
+    $cflags = "-I$ENV{ALIEN_CHIPMUNK_PREFIX}/include/chipmunk";
+    $libs   = "-L$ENV{ALIEN_CHIPMUNK_PREFIX}/lib $libs";
+}
+else {
+    foreach
+        my $dir ( map {"$_/chipmunk"} qw( /usr/include /usr/local/include ) )
+    {
+        if ( -r "$dir/chipmunk.h" ) {
+            $cflags = "-I$dir";
+        }
     }
-  }
 }
 
 my $builder = My::ModuleBuild->new(
@@ -27,13 +31,9 @@ my $builder = My::ModuleBuild->new(
         'Module::Build' => 0,
         'Alien::Base'   => 0,
     },
-    build_requires => {
-        'Test::More'   => 0,
-    },
-    alien_bin_requires => {
-        'Alien::CMake' => '0.03',
-    },
-    requires => {
+    build_requires     => { 'Test::More'   => 0, },
+    alien_bin_requires => { 'Alien::CMake' => '0.03', },
+    requires           => {
         'perl'        => '5.8.1',
         'Alien::Base' => '0.020',
     },
@@ -45,23 +45,19 @@ my $builder = My::ModuleBuild->new(
             bugtracker => 'https://github.com/jtpalmer/Alien-Chipmunk/issues',
         },
     },
-    alien_name       => 'chipmunk',
+    alien_name            => 'chipmunk',
     alien_isolate_dynamic => 1,
     alien_provides_cflags => $cflags,
-    alien_provides_libs => $libs,
-    alien_repository => {
+    alien_provides_libs   => $libs,
+    alien_repository      => {
         protocol => 'http',
         host     => 'chipmunk-physics.net',
         location => '/release/Chipmunk-6.x',
         pattern  => qr/Chipmunk-([\d\.]+)\.tgz$/,
     },
-    alien_build_commands => [
-        'cmake -DBUILD_DEMOS=OFF -DCMAKE_INSTALL_PREFIX=%s',
-        'make',
-    ],
-    alien_install_commands => [
-        'make install'
-    ],
+    alien_build_commands =>
+        [ 'cmake -DBUILD_DEMOS=OFF -DCMAKE_INSTALL_PREFIX=%s', 'make', ],
+    alien_install_commands => [ 'make install' ],
 );
 
 $builder->create_build_script;
