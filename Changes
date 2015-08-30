@@ -1,5 +1,8 @@
 Revision history for Alien-Chipmunk
 
+0.001000 2015-08-30
+    - Tidied source code
+
 0.000_002 2015-08-04
     - Updates for Alien::Base 0.020
 

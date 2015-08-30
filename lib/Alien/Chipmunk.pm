@@ -4,7 +4,7 @@ use strict;
 use warnings;
 use parent qw(Alien::Base);
 
-our $VERSION = '0.000_002';
+our $VERSION = '0.001000';
 $VERSION = eval $VERSION;
 
 1;
