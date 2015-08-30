@@ -76,6 +76,6 @@
 ^_build
 ^_share
 
-^t/src/test
-^t/src/test.o
+^t/src/test$
+^t/src/test.o$
 
