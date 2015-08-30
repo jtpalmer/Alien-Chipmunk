@@ -34,7 +34,7 @@ Alien::Chipmunk - Alien package for the Chipmunk Physics library
             # ...
         },
         extra_compiler_flags => $alien->cflags,
-        extra_linker_flags   => $alien->libs . ' -lm',
+        extra_linker_flags   => $alien->libs,
     );
 
     $builder->create_build_script();
