@@ -13,4 +13,3 @@ t/01-config.t
 t/02-compile.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
-t/src/test.c

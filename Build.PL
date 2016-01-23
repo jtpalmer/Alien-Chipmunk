@@ -31,13 +31,13 @@ my $builder = My::ModuleBuild->new(
         'Module::Build'            => 0,
         'Alien::Base::ModuleBuild' => 0,
     },
-    build_requires     => { 'Test::More'   => 0, },
-    alien_bin_requires => { 'Alien::CMake' => '0.03', },
+    build_requires     => { 'Test::More'     => 0, },
+    test_requires      => { 'Test::CChecker' => '0.07', },
+    alien_bin_requires => { 'Alien::CMake'   => '0.03', },
     requires           => {
         'perl'        => '5.8.1',
         'Alien::Base' => '0.020',
     },
-    add_to_cleanup => [ 't/src/test.o', 't/src/test' ],
     meta_merge     => {
         resources => {
             homepage   => 'https://github.com/jtpalmer/Alien-Chipmunk',

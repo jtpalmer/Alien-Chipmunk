@@ -2,28 +2,32 @@ use strict;
 use warnings;
 use Test::More;
 use Alien::Chipmunk;
-use Config;
+use Test::CChecker 0.07;
 
-eval "use ExtUtils::CBuilder 0.2703";
-plan skip_all => "ExtUtils::CBuilder 0.2703 required for this test" if $@;
+compile_output_to_note;
 
-my $alien = Alien::Chipmunk->new();
+compile_with_alien 'Alien::Chipmunk';
 
-my $cb = ExtUtils::CBuilder->new( quiet => 0 );
-my $obj = $cb->compile(
-    source               => 't/src/test.c',
-    extra_compiler_flags => $alien->cflags,
-);
-is( defined $obj, 1, "Compiling test.c" );
+my $source = do { local $/; <DATA> };
 
-my $exe = $cb->link_executable(
-    objects            => [$obj],
-    extra_linker_flags => $alien->libs,
-);
-is( defined $exe, 1, "Linking test.c" );
+compile_ok $source, 'basic compile test';
 
-my $rv = system($exe);
-is( $rv, 0, "Executing test" );
+compile_run_ok $source, "basic compile/link/run test";
 
 done_testing();
 
+__DATA__
+#include <chipmunk.h>
+#include <stdio.h>
+
+int main(int argc, const char *argv[])
+{
+    cpVect gravity = cpv(0, -100);
+
+    cpSpace *space = cpSpaceNew();
+    cpSpaceSetGravity(space, gravity);
+
+    cpSpaceFree(space);
+
+    return 0;
+}
