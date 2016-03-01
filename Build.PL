@@ -29,7 +29,7 @@ my $builder = My::ModuleBuild->new(
     license            => 'mit',
     configure_requires => {
         'Module::Build' => 0,
-        'Alien::Base'   => 0,
+        'Alien::Base::ModuleBuild'   => 0,
     },
     build_requires     => { 'Test::More'   => 0, },
     alien_bin_requires => { 'Alien::CMake' => '0.03', },
