@@ -1,5 +1,9 @@
 Revision history for Alien-Chipmunk
 
+0.001_001 2016-03-02
+    - Specify Alien::Base::ModuleBuild in configure_requires instead of
+      Alien::Base
+
 0.001000 2015-08-30
     - Tidied source code
 
