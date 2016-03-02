@@ -28,8 +28,8 @@ my $builder = My::ModuleBuild->new(
     dist_author        => 'Jeffrey T. Palmer <jtpalmer@cpan.org>',
     license            => 'mit',
     configure_requires => {
-        'Module::Build' => 0,
-        'Alien::Base::ModuleBuild'   => 0,
+        'Module::Build'            => 0,
+        'Alien::Base::ModuleBuild' => 0,
     },
     build_requires     => { 'Test::More'   => 0, },
     alien_bin_requires => { 'Alien::CMake' => '0.03', },
@@ -57,7 +57,7 @@ my $builder = My::ModuleBuild->new(
     },
     alien_build_commands =>
         [ 'cmake -DBUILD_DEMOS=OFF -DCMAKE_INSTALL_PREFIX=%s', 'make', ],
-    alien_install_commands => [ 'make install' ],
+    alien_install_commands => ['make install'],
 );
 
 $builder->create_build_script;
