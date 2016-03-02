@@ -34,6 +34,8 @@ my $builder = My::ModuleBuild->new(
     test_requires      => {
         'Test::More'     => 0,
         'Test::CChecker' => '0.07',
+        'Test::Alien'    => 0,
+        'Test::Stream'   => 0,
     },
     alien_bin_requires => { 'Alien::CMake'   => '0.03', },
     requires           => {

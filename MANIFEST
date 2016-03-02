@@ -11,5 +11,6 @@ README
 t/00-load.t
 t/01-config.t
 t/02-compile.t
+t/03-xs.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
