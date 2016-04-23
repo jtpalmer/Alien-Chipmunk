@@ -1,40 +1,46 @@
+use strict;
+use warnings;
 use Test::Stream -V1;
 use Test::Alien;
 use Alien::Chipmunk;
+
+plan 3;
 
 alien_ok 'Alien::Chipmunk';
 
 my $xs = do { local $/; <DATA> };
 
-xs_ok { xs => $xs, verbose => 1 };
-done_testing();
+xs_ok $xs, with_subtest {
+    my ($module) = @_;
 
-xs_ok { xs => $xs, verbose => 1 }, with_subtest {
-    my $space = My::Chipmunk::space_new();
+    plan 2;
+    my $space = $module->space_new();
     ok $space, 'Created space';
-    My::Chipmunk::space_destroy($space);
-    pass 'did not crash';
+    $module->space_destroy($space);
+    pass 'Space destroyed';
 };
 
-done_testing();
-
 __DATA__
+
 #include "EXTERN.h"
 #include "perl.h"
 #include "XSUB.h"
 #include <chipmunk.h>
 
-MODULE = My::Chipmunk PACKAGE = My::Chipmunk
+MODULE = TA_MODULE PACKAGE = TA_MODULE PREFIX = my_
 
 void *
-space_new()
+my_space_new(CLASS)
+        char *CLASS
     CODE:
         RETVAL = (void *)cpSpaceNew();
     OUTPUT:
         RETVAL
 
 void
-space_destroy(space)
+my_space_destroy(CLASS, space)
+        char *CLASS
         void *space
     CODE:
         cpSpaceFree((cpSpace *)space);
+
